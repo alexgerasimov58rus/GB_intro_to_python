@@ -9,7 +9,11 @@ count = random.randint(5, 10)
 
 print(f'first_el = {first_el} step = {step} count = {count}')
 
-for i in range(count):
-    print(first_el, end=' ')
-    first_el += step
+result = [first_el + i * step for i in range(count)]
+print(result)
+print(list(range(first_el, first_el + count * step, step)))
+
+# for _ in range(count):
+#     print(first_el, end=' ')
+#     first_el += step
 
